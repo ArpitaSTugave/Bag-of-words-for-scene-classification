@@ -1,0 +1,60 @@
+#include "iostream"
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include "cv.h"
+#include "highgui.h"
+#include <opencv2/nonfree/nonfree.hpp>
+#include <opencv2/nonfree/features2d.hpp>
+#include <opencv2/flann/flann.hpp>
+#include <opencv2/legacy/legacy.hpp>
+#include <vector>
+
+
+using namespace cv;
+using namespace std;
+
+int main()
+{
+    Mat image1,image2,image3,image4;
+    image1 = imread("2.png",0);
+    image2 = imread("3.png",0);
+
+    vector<KeyPoint> keypointsA,keypointsB;
+    Mat descriptorsA,descriptorsB;
+
+    std::vector<DMatch> matches;
+
+    OrbFeatureDetector detector(1000);
+
+    FREAK extractor;
+
+    BruteForceMatcher<Hamming> matcher;
+
+    detector.detect(image1,keypointsA);
+    detector.detect(image2,keypointsB);
+
+    extractor.compute(image1,keypointsA,descriptorsA);
+    extractor.compute(image2,keypointsB,descriptorsB);
+
+    matcher.match(descriptorsA, descriptorsB, matches);
+
+    int nofmatches = 10;
+    nth_element(matches.begin(),matches.begin()+nofmatches,matches.end());
+    matches.erase(matches.begin()+nofmatches+1,matches.end());
+
+    Mat imgMatch;
+    drawMatches(image1, keypointsA, image2, keypointsB, matches, imgMatch);
+
+    imshow("matches", imgMatch);
+    waitKey(0);
+
+    return 0;
+
+}
+
+/*
+g++ -I/usr/local/include/opencv -I/usr/local/include/opencv2 -L/usr/local/lib/ -g -o matchtest  matchtest.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching -lopencv_features2d -lopencv_nonfree 
+*/
+/*
+./matchtest
+*/

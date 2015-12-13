@@ -1,0 +1,29 @@
+Version 1.0 Date: Dec/12/2015
+
+................................
+General Usage notes:
+
+compile: type 'make' in terminal of mac or ubuntu
+
+differen run options on ubuntu:
+run: ./feature  SURF
+run: ./feature  SIFT
+run: ./feature  FAST
+run: ./feature  BRISK
+run: ./feature  STAR
+run: ./feature  MSER
+run: ./feature  GFFT
+run: ./feature  DENSE
+
+different run options on mac:
+run: .\feature  SURF
+run: .\feature  SIFT
+run: .\feature  FAST
+run: .\feature  BRISK
+run: .\feature  STAR
+run: .\feature  MSER
+run: .\feature  GFFT
+run: .\feature  DENSE
+
+...................................
+reference: Arpita S Tugave

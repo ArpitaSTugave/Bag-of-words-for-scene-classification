@@ -1,0 +1,16 @@
+Version 1.0 Date: Dec/12/2015
+
+................................
+General Usage notes:
+
+compile: type 'make' in terminal of mac or ubuntu
+
+differen run options on ubuntu:
+run: ./bag
+
+different run options on mac:
+run: .\bag
+
+...................................
+reference: code modified by Arpita S Tugave 
+initially referred from Mohammadreza Mostajabi
