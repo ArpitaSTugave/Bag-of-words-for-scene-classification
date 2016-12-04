@@ -107,12 +107,11 @@ HARRIS corner detection in detecting corners</P>
 <P class="p80 ft10"><SPAN class="ft10"><H3> C.&nbsp;&nbsp; Bag of Words </H3></P>
 <P class="p90 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bag of words is well known used method for classification of images and text. It originated from text mining of frequency of words in the dictionary. Opposite to supervised classification techniques, Bag of Words learns frequency of occurrence and learns the pattern on its own and generates code book. This code book is nothing but the histogram representation of each part as shown in Fig. 5. Codebook is analogous to words in the dictionary. Each word is a cluster of similar histogram patterns. Let discuss internal mathematical implementations in the Bag of Words.</P>
 <P class="p91 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bag of Words is also used in object recognition analogous to scene classification. Internally, it evaluates using confusion matrix. Bayes model developed in Natural Language Processing <NOBR>–NLP</NOBR> can be used even for image classification.</P>
-<P class="p92 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let ‘<SPAN class="ft20">c’ </SPAN>be image category, ‘<SPAN class="ft20">V’ </SPAN>be the size of Codebook and ‘<SPAN class="ft20">w’ </SPAN>be <SPAN class="ft20">V </SPAN><NOBR><SPAN class="ft20">–dimensional</SPAN></NOBR><SPAN class="ft20"> </SPAN>vector. In matrix of ‘<SPAN class="ft20">w’ </SPAN>only one entity is 1.</P>
+<P class="p92 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let ‘<SPAN class="ft20">c’ </SPAN>be image category, ‘<SPAN class="ft20">V’ </SPAN>be the size of Codebook and ‘<SPAN class="ft20">w’ </SPAN>be <SPAN class="ft20">V </SPAN><NOBR><SPAN class="ft20">–dimensional</SPAN></NOBR><SPAN class="ft20"> </SPAN>vector. In matrix of ‘<SPAN class="ft20">w’ </SPAN>one entity is:</P>
 <P class="p93 ft6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W = [w<SPAN class="ft39">1 </SPAN>, w<SPAN class="ft39">2 </SPAN>,………………, w<SPAN class="ft39">n</SPAN>]</P>
 <P class="p94 ft6"><SPAN class="ft10">W</SPAN><SPAN class="ft40">is the representation of the image using all the patches </SPAN><SPAN class="ft10">‘w’ </SPAN>in the image.</P>
-<P class="p95 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Naïve Bayes classifier is used in categorization. Bag of Words classifier has to learn each categorization for an image. For example: nose, mouth for a face and wheel, break for a bike as shown in Fig. 5. This particular object level categorization is possible by using the Naïve Bayes classifier. 
+<P class="p95 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Naïve Bayes classifier is used in categorization. Bag of Words classifier has to learn each categorization for an image. For example: nose, mouth for a face and wheel, break for a bike. This particular object level categorization is possible by using the Naïve Bayes classifier. 
 <P class="p97 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The higher levels of implementations of Bag of Words are VLDA encoding and Spatial Pyramid Pooling. Spatial pyramid pooling uses various resolutions of feature level extraction. Using Spatial Pyramid pooling, M. Koskela achieved the highest <NOBR>Image–net</NOBR> scene classification accuracy of around 91%. This is by using combinational advantages of <NOBR>Convolutional–Neural–Network–CNN</NOBR> and Spatial Pyramid Pooling. It took about 13 days of training on each set.</P>
-<P class="p98 ft8">Fig. 6.Bag of Words.</P>
 </DIV>
 
 <DIV id="id_1_2">
@@ -136,173 +135,67 @@ HARRIS corner detection in detecting corners</P>
 <DIV id="id_1_2">
 <P class="p80 ft10"><SPAN class="ft10"><H3> A.&nbsp;&nbsp; Dataset </H3></P>
 <P class="p104 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Testing of bag of words included creation of personal dataset. This data was created using a video sequence of <NOBR>Image–Net</NOBR> dataset. Videos at different time frames were captured. This included a class of bird and car as shown in Fig. consisting of 30 images each. Let this be <NOBR>dataset–1.</NOBR> While experimentation, we will refer this as <NOBR>Dataset–1.</NOBR></P>
+</DIV>
 
 ![data-1](https://cloud.githubusercontent.com/assets/11435669/20868061/0bbdac2c-ba20-11e6-931a-1f64008554c9.png)
 
+<DIV id="id_1_3">
 <P class="p106 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For <NOBR>Dataset–2</NOBR> of Motajabi’s workshop [12], we introduced a higher level of complexity. In total it included four classes of images, namely: airplane, bike, car and cheetahs. Each class has around 60 images each, so size of the dataset is 240. Variations ranged from the object being replaced with varied background scene to many objects in the scene. As seen in Fig. we trained and tested for many to one data of cheetahs.</P>
+</DIV>
 
 ![data-2](https://cloud.githubusercontent.com/assets/11435669/20868058/0ba9ce14-ba20-11e6-9d6e-909e9ed6a996.png)
 
+<DIV id="id_1_3">
 <P class="p108 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<NOBR>Dataset–3</NOBR> included elements like many objects, blur, far and close scenes, different image dimension. It was taken from the UIUC sports dataset [13], which included a total of 8 sports: rowing, badminton, polo, bocce, snowboarding, croquet, sailing, rock climbing. We selected 6 sports of total 8 and arranged them to find accuracy. Arranging of data is necessary in unsupervised learning to verify classification results of test data, if test data have no reference provided by Database provider. Therefore, our set consists of 6 sets of 120 images each.</P>
+</DIV>
 
 ![data-3](https://cloud.githubusercontent.com/assets/11435669/20868059/0bb3ac7c-ba20-11e6-8715-bf9208c70e1c.png)
 
+<DIV id="id_1_3">
 <P class="p110 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<NOBR>Dataset–4</NOBR> by MIT [14] has one of the highest levels of complexity. We arranged data into 10 classes of, namely: <NOBR>Airport–Inside,</NOBR> Bar, Bowling, Casino, <NOBR>Elevator–google,</NOBR> <NOBR>Inside–subway,</NOBR> <NOBR>locker–room,</NOBR> restaurant kitchen, and warehouse. Images of same classes sometimes have very little similarity. Look at Fig. 10. The top row shows restaurant kitchen. For a computer, matching images of almost no similarity possible only by using neural networks. The arranged data has a total of 10 classes of 90 images each.</P>
+</DIV>
 
 ![data-4](https://cloud.githubusercontent.com/assets/11435669/20868060/0bbca606-ba20-11e6-88b3-a39f76b7ebbe.png)
 
+<DIV id="id_1_3">
 <P class="p112 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dataset– 5 included <NOBR>scenes–15</NOBR> [15] of over seven million images. We used NVIDIA server with GPUs to run our algorithm. It took hours to run for KNN, but SVM would take days. Results show BOW to be inefficient for large data. Therefore, results are not evaluated for this dataset. However using CNN classification accuracy of 70 % was achieved.</P>
 </DIV>
 
 <DIV id="id_1">
-<P class="p0 ft10">B. Evaluation</P>
-<P class="p113 ft9">First step in our experiment, we evaluate feature detectors and extractors. Feature detectors such as SIFT, BRISK, ORB, SURF, FAST, STAR, MSER, GFFT and DENSE are fused with Feature extractors of SIFT and SURF. In our experiment, time taken for execution of different fusion techniques is compared. Feature extractors of SURF and SIFT produce almost the same results. As shown in Fig. 12. Taking normalized time along the positive <SPAN class="ft20">y </SPAN>axis, showed SIFT, GFFT and MSER to be efficient in time. However, this alone is not sufficient to evaluate time complexity of Bag of Words application.</P>
-<!--[if lte IE 7]><P style="margin-left:27px;margin-top:0px;margin-right:-167px;margin-bottom:0px;" class="p114 ft55"><![endif]--><!--[if gte IE 8]><P style="margin-left:-113px;margin-top:0px;margin-right:-27px;margin-bottom:140px;" class="p114 ft55"><![endif]--><![if ! IE]><P style="margin-left:-43px;margin-top:70px;margin-right:-97px;margin-bottom:70px;" class="p114 ft55"><![endif]>time</P>
-<P class="p115 ft8">Fig. 12. Time taken for Feature detection.</P>
-<P class="p116 ft6">IV. RESULTS</P>
-<P class="p117 ft9"><NOBR>Database–1</NOBR> has images with slight variation. Therefore, using Bag of Words we can achieve an accuracy of 100%. Number of features clustered by <NOBR>K–means</NOBR> has to be considered in order to evaluate space dimensionality. Fig. 13 shows DENSE features to have the highest number of features clustered. Here as the dimension is normalized, in our experiments: DENSE has a dimension of around 600,000 and FAST around 200,000, rest in the range of <NOBR>10–50</NOBR> hundreds. A low computing system fails to evaluate DENSE. Thereby, we discard DENSE in our further experiments.</P>
+<P class="p80 ft10"><SPAN class="ft10"><H3> B.&nbsp;&nbsp; Evaluation </H3></P>
+<P class="p113 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First step in our experiment, we evaluate feature detectors and extractors. Feature detectors such as SIFT, BRISK, ORB, SURF, FAST, STAR, MSER, GFFT and DENSE are fused with Feature extractors of SIFT and SURF. In our experiment, time taken for execution of different fusion techniques is compared. Feature extractors of SURF and SIFT produce almost the same results. As shown in Fig. 12. Taking normalized time along the positive <SPAN class="ft20">y </SPAN>axis, showed SIFT, GFFT and MSER to be efficient in time. However, this alone is not sufficient to evaluate time complexity of Bag of Words application.</P>
 </DIV>
-<DIV id="id_1_2">
-<P class="p118 ft9">We once again fuse various feature detectors with SIFT and SURF feature extractors, for our <NOBR>Dataset–2.</NOBR> After analysis, SIFT feature extractor performed better than SURF feature extractor. However, with space complexity, few algorithms like GFFT cannot perform with SIFT. Therefore, even though less efficient, systems with space complexity works well with SURF. Otherwise, SIFT feature extractor produces better results. This comparison can be seen from Fig. 14 (top), wherein, accuracy obtained from SIFT and SURF are normalized. Also, from Fig. 14 (bottom) normalized error rates and dimensions are compared for different feature detectors with SIFT feature extractor. The lesser the dimension and error rates, the better the performance. Therefore, the FAST feature detector doesn’t seem to be perform better and can be ignored in our next experiment.</P>
-</DIV>
-</DIV>
-<DIV id="id_2">
-<P class="p119 ft8">Fig. 14. Comparison between SIFT and SIRF (top) , Dimension vs</P>
-<P class="p120 ft8">Error rates of Feature Detectors with SIFT Feature Extractor.</P>
-<P class="p121 ft6">For <NOBR>Dataset–3</NOBR> and <NOBR>Dataset–4,</NOBR> results are specific to the given system. These are given by table Table. 3. (top) and Table. 3. (bottom) respectively. First of all, for <NOBR>Dataset–3</NOBR> we can see that: even though GFFT is faster, it is less efficient, due to motion effects in sports activities. Also, it can be seen that <NOBR>SURF–SIFT</NOBR> has time complexity as the data is large. However, for <NOBR>Dataset–3</NOBR> <NOBR>SURF–SURF</NOBR> is the most efficient.</P>
-<P class="p122 ft8">Fig. 13 Comparing dimensions of Feature detectors.</P>
-<P class="p123 ft12">7</P>
-</DIV>
-</DIV>
-<DIV id="page_8">
+
+![compare1](https://cloud.githubusercontent.com/assets/11435669/20867666/fda255dc-ba17-11e6-9d34-621ad77f895e.png)
+<P class="p80 ft10">Time taken for Feature detection.</P>
 
 
 <DIV id="id_1">
-<DIV id="id_1_1">
-<P class="p124 ft9">Now, comparing results of <NOBR>Dataset–3</NOBR> to <NOBR>Dataset–4,</NOBR> it is evident that due to a smaller set of data in <NOBR>Dataset–4,</NOBR> SURF– SIFT is the most time efficient. Also, due to lesser motion effects, as <NOBR>Dataset–4</NOBR> is mostly composed of still objects, GFFT is the fastest with optimum efficiency.</P>
-<TABLE cellpadding=0 cellspacing=0 class="t2">
-<TR>
-	<TD class="tr3 td22"><P class="p125 ft25"><NOBR>Detection–Extraction</NOBR></P></TD>
-	<TD class="tr3 td23"><P class="p126 ft25">Accuracy</P></TD>
-	<TD class="tr3 td24"><P class="p127 ft25">Time(minute)</P></TD>
-</TR>
-<TR>
-	<TD class="tr12 td25"><P class="p50 ft56">&nbsp;</P></TD>
-	<TD class="tr12 td26"><P class="p50 ft56">&nbsp;</P></TD>
-	<TD class="tr12 td27"><P class="p50 ft56">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr0 td28"><P class="p69 ft8"><NOBR>SURF–SURF</NOBR></P></TD>
-	<TD class="tr0 td29"><P class="p55 ft8">64</P></TD>
-	<TD class="tr0 td30"><P class="p55 ft8">24</P></TD>
-</TR>
-<TR>
-	<TD class="tr8 td31"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td32"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td33"><P class="p50 ft31">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr3 td28"><P class="p69 ft8"><NOBR>SURF–SIFT</NOBR></P></TD>
-	<TD class="tr3 td29"><P class="p55 ft8">N/A</P></TD>
-	<TD class="tr3 td30"><P class="p55 ft27">&gt;60</P></TD>
-</TR>
-<TR>
-	<TD class="tr12 td31"><P class="p50 ft56">&nbsp;</P></TD>
-	<TD class="tr12 td32"><P class="p50 ft56">&nbsp;</P></TD>
-	<TD class="tr12 td33"><P class="p50 ft56">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr3 td28"><P class="p69 ft27"><NOBR>SIFT–SIFT</NOBR></P></TD>
-	<TD class="tr3 td29"><P class="p55 ft8">62</P></TD>
-	<TD class="tr3 td30"><P class="p55 ft8">30</P></TD>
-</TR>
-<TR>
-	<TD class="tr12 td31"><P class="p50 ft56">&nbsp;</P></TD>
-	<TD class="tr12 td32"><P class="p50 ft56">&nbsp;</P></TD>
-	<TD class="tr12 td33"><P class="p50 ft56">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr3 td28"><P class="p128 ft8"><NOBR>BRISK–SIFT</NOBR></P></TD>
-	<TD class="tr3 td29"><P class="p55 ft8">62</P></TD>
-	<TD class="tr3 td30"><P class="p55 ft8">32</P></TD>
-</TR>
-<TR>
-	<TD class="tr8 td31"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td32"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td33"><P class="p50 ft31">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr3 td28"><P class="p54 ft27"><NOBR>GFFT–SIFT</NOBR></P></TD>
-	<TD class="tr3 td29"><P class="p55 ft8">48</P></TD>
-	<TD class="tr3 td30"><P class="p55 ft8">20</P></TD>
-</TR>
-<TR>
-	<TD class="tr12 td31"><P class="p50 ft56">&nbsp;</P></TD>
-	<TD class="tr12 td32"><P class="p50 ft56">&nbsp;</P></TD>
-	<TD class="tr12 td33"><P class="p50 ft56">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr4 td28"><P class="p125 ft25"><NOBR>Detection–Extraction</NOBR></P></TD>
-	<TD class="tr4 td29"><P class="p126 ft25">Accuracy</P></TD>
-	<TD class="tr4 td30"><P class="p127 ft25">Time(minute)</P></TD>
-</TR>
-<TR>
-	<TD class="tr8 td25"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td26"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td27"><P class="p50 ft31">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr0 td28"><P class="p69 ft8"><NOBR>SURF–SURF</NOBR></P></TD>
-	<TD class="tr0 td29"><P class="p55 ft8">41</P></TD>
-	<TD class="tr0 td30"><P class="p55 ft8">23</P></TD>
-</TR>
-<TR>
-	<TD class="tr8 td31"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td32"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td33"><P class="p50 ft31">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr0 td28"><P class="p69 ft8"><NOBR>SURF–SIFT</NOBR></P></TD>
-	<TD class="tr0 td29"><P class="p55 ft8">46</P></TD>
-	<TD class="tr0 td30"><P class="p55 ft8">30</P></TD>
-</TR>
-<TR>
-	<TD class="tr8 td31"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td32"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td33"><P class="p50 ft31">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr3 td28"><P class="p69 ft27"><NOBR>SIFT–SIFT</NOBR></P></TD>
-	<TD class="tr3 td29"><P class="p55 ft8">40</P></TD>
-	<TD class="tr3 td30"><P class="p55 ft8">31</P></TD>
-</TR>
-<TR>
-	<TD class="tr8 td31"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td32"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td33"><P class="p50 ft31">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr0 td28"><P class="p128 ft8"><NOBR>BRISK–SIFT</NOBR></P></TD>
-	<TD class="tr0 td29"><P class="p55 ft8">42</P></TD>
-	<TD class="tr0 td30"><P class="p55 ft8">33</P></TD>
-</TR>
-<TR>
-	<TD class="tr8 td31"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td32"><P class="p50 ft31">&nbsp;</P></TD>
-	<TD class="tr8 td33"><P class="p50 ft31">&nbsp;</P></TD>
-</TR>
-<TR>
-	<TD class="tr3 td28"><P class="p54 ft27"><NOBR>GFFT–SIFT</NOBR></P></TD>
-	<TD class="tr3 td29"><P class="p55 ft8">43</P></TD>
-	<TD class="tr3 td30"><P class="p55 ft8">19</P></TD>
-</TR>
-<TR>
-	<TD class="tr1 td31"><P class="p50 ft26">&nbsp;</P></TD>
-	<TD class="tr1 td32"><P class="p50 ft26">&nbsp;</P></TD>
-	<TD class="tr1 td33"><P class="p50 ft26">&nbsp;</P></TD>
-</TR>
-</TABLE>
+<P class="p80 ft10"><SPAN class="ft10"><H2> B.&nbsp;&nbsp; Results </H2></P>
+<P class="p117 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<NOBR>Database–1</NOBR> has images with slight variation. Therefore, using Bag of Words we can achieve an accuracy of 100%. Number of features clustered by <NOBR>K–means</NOBR> has to be considered in order to evaluate space dimensionality. Fig. shows DENSE features to have the highest number of features clustered. Here as the dimension is normalized, in our experiments: DENSE has a dimension of around 600,000 and FAST around 200,000, rest in the range of <NOBR>10–50</NOBR> hundreds. A low computing system fails to evaluate DENSE. Thereby, we discard DENSE in our further experiments.</P>
+</DIV>
+![compare4](https://cloud.githubusercontent.com/assets/11435669/20867663/fd9fea90-ba17-11e6-8a70-bf95e8c7caa6.png)
+
+<DIV id="id_1_2">
+<P class="p118 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We once again fuse various feature detectors with SIFT and SURF feature extractors, for our <NOBR>Dataset–2.</NOBR> After analysis, SIFT feature extractor performed better than SURF feature extractor. However, with space complexity, few algorithms like GFFT cannot perform with SIFT. Therefore, even though less efficient, systems with space complexity works well with SURF. Otherwise, SIFT feature extractor produces better results. This comparison can be seen from Fig. (top), wherein, accuracy obtained from SIFT and SURF are normalized. Also, from Fig. (bottom) normalized error rates and dimensions are compared for different feature detectors with SIFT feature extractor. The lesser the dimension and error rates, the better the performance. Therefore, the FAST feature detector doesn’t seem to be perform better and can be ignored in our next experiment.</P>
+</DIV>
+
+![compare2](https://cloud.githubusercontent.com/assets/11435669/20867661/fd8f17e2-ba17-11e6-93b7-35b49969ce7f.png)
+![compare3](https://cloud.githubusercontent.com/assets/11435669/20867662/fd9873b4-ba17-11e6-8674-b7dce3ceef28.png)
+
+<DIV id="id_2">
+<P class="p121 ft6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For <NOBR>Dataset–3</NOBR> and <NOBR>Dataset–4,</NOBR> results are specific to the given system. These are given by table Table. 3. (top) and Table. 3. (bottom) respectively. First of all, for <NOBR>Dataset–3</NOBR> we can see that: even though GFFT is faster, it is less efficient, due to motion effects in sports activities. Also, it can be seen that <NOBR>SURF–SIFT</NOBR> has time complexity as the data is large. However, for <NOBR>Dataset–3</NOBR> <NOBR>SURF–SURF</NOBR> is the most efficient.</P>
+</DIV>
+
+
+<DIV id="id_1">
+<P class="p124 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now, comparing results of <NOBR>Dataset–3</NOBR> to <NOBR>Dataset–4,</NOBR> it is evident that due to a smaller set of data in <NOBR>Dataset–4,</NOBR> SURF– SIFT is the most time efficient. Also, due to lesser motion effects, as <NOBR>Dataset–4</NOBR> is mostly composed of still objects, GFFT is the fastest with optimum efficiency.</P>
+</DIV>
+
+![table3](https://cloud.githubusercontent.com/assets/11435669/20868073/4460c4a6-ba20-11e6-9845-d4be928c158a.png)
 <P class="p129 ft8">Table. 3. Results for <NOBR>Dataset–3</NOBR> (top), Results for <NOBR>Dataset–4</NOBR> (bottom).</P>
+
+<DIV id="id_1">
 <P class="p130 ft6"><SPAN class="ft6">V.</SPAN><SPAN class="ft57">CONCLUSION</SPAN></P>
 <P class="p131 ft9">According to our observation, choice of feature extractors and feature detectors is specific to the system. Previous studied showed SURF to be performing than SIFT. However we believe that it is true only in the case of Feature Detection. Thereby, from our observations, the fusion of SURF feature detection and SIFT feature extractor is the most efficient. However, it also has the higher time complexity. Therefore, with parallelization SURF <NOBR>–SURF</NOBR> performs optimally.</P>
 <P class="p132 ft9">Additionally, for images with motion effects, GFFT perform worse than otherwise. To our knowledge, GFFT is the fastest performing feature detector. It produces optimal results for data without motion effects.</P>
