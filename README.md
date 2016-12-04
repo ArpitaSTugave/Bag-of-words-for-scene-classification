@@ -9,7 +9,8 @@
 <DIV id="id_2_1">
 <P class="p9 ft6"><H1> Introduction </H1></P>
 <P class="p10 ft6">Scene Classification is one of the most advancing areas in the field of Image Processing. Because of its use in: weather forecast, browsing for a particular class of images, recognition of objects within a scene, medical diagnosis; demand for efficient scene classification algorithm rises. On one hand, if scene classification deals with images, on the other, text mining uses textual words. With a <NOBR>large–scale</NOBR> collection of data, efficient and robust classification techniques are needed for easy search. Scene classification of images depends mainly on: texture, transformation, color of the image. Use of efficient local feature detection and extraction techniques is necessary to capture these details.</P>
-<P class="p11 ft8">Fig. 1.Scene Classification.</P>
+![My image](https://github.com/ArpitaSTugave/bagOfWords/tree/FeatureExtraction/images/sceneclassification.png)
+<P class="p11 ft8">Fig: Scene Classification</P>
 </DIV>
 <DIV id="id_2_2">
 <P class="p12 ft6">Researchers have come up with various feature detection and extraction algorithm. In this paper, we implement some prominent local feature extraction methods. Feature extraction is the retrieval of important information which describes the system, many a times better than the system itself. We believe each feature extraction technique suites better for its respective system, it is designed for. Therefore, an attempt has been made in this paper to provide this correlation of system to extraction technique. Henceforth, we experiment with our features providing: dimensional and time analysis. Further, we show a real world application of feature extraction in scene classification.</P>
