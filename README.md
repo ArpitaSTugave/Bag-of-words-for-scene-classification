@@ -200,8 +200,6 @@ HARRIS corner detection in detecting corners</P>
 <P class="p80 ft10"><SPAN class="ft10"><H2> Conclusion </H2></P>
 <P class="p131 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;According to our observation, choice of feature extractors and feature detectors is specific to the system. Previous studied showed SURF to be performing than SIFT. However we believe that it is true only in the case of Feature Detection. Thereby, from our observations, the fusion of SURF feature detection and SIFT feature extractor is the most efficient. However, it also has the higher time complexity. Therefore, with parallelization SURF <NOBR>–SURF</NOBR> performs optimally.</P>
 <P class="p132 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Additionally, for images with motion effects, GFFT perform worse than otherwise. To our knowledge, GFFT is the fastest performing feature detector. It produces optimal results for data without motion effects.</P>
-<P class="p133 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For our future work, we will extend Bag of Words with VLDA encoding and implement Spatial Pyramid Pooling. Also, we will try to uses CNN with Spatial Pyramid pooling technique to achieve better scene classification accuracy.</P>
-<P class="p134 ft6">ACKNOWLEDGMENT</P>
 </DIV>
 
 <DIV id="id_1_2">
