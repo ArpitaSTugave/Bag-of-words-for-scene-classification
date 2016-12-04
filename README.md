@@ -152,7 +152,7 @@ HARRIS corner detection in detecting corners</P>
 ![data-3](https://cloud.githubusercontent.com/assets/11435669/20868059/0bb3ac7c-ba20-11e6-8715-bf9208c70e1c.png)
 
 <DIV id="id_1_3">
-<P class="p110 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<NOBR>Dataset–4</NOBR> by MIT [14] has one of the highest levels of complexity. We arranged data into 10 classes of, namely: <NOBR>Airport–Inside,</NOBR> Bar, Bowling, Casino, <NOBR>Elevator–google,</NOBR> <NOBR>Inside–subway,</NOBR> <NOBR>locker–room,</NOBR> restaurant kitchen, and warehouse. Images of same classes sometimes have very little similarity. Look at Fig. 10. The top row shows restaurant kitchen. For a computer, matching images of almost no similarity possible only by using neural networks. The arranged data has a total of 10 classes of 90 images each.</P>
+<P class="p110 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<NOBR>Dataset–4</NOBR> by MIT [14] has one of the highest levels of complexity. We arranged data into 10 classes of, namely: <NOBR>Airport–Inside,</NOBR> Bar, Bowling, Casino, <NOBR>Elevator–google,</NOBR> <NOBR>Inside–subway,</NOBR> <NOBR>locker–room,</NOBR> restaurant kitchen, and warehouse. Images of same classes sometimes have very little similarity. Look at Fig. The top row shows restaurant kitchen. For a computer, matching images of almost no similarity possible only by using neural networks. The arranged data has a total of 10 classes of 90 images each.</P>
 </DIV>
 
 ![data-4](https://cloud.githubusercontent.com/assets/11435669/20868060/0bbca606-ba20-11e6-88b3-a39f76b7ebbe.png)
@@ -163,7 +163,7 @@ HARRIS corner detection in detecting corners</P>
 
 <DIV id="id_1">
 <P class="p80 ft10"><SPAN class="ft10"><H3> B.&nbsp;&nbsp; Evaluation </H3></P>
-<P class="p113 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First step in our experiment, we evaluate feature detectors and extractors. Feature detectors such as SIFT, BRISK, ORB, SURF, FAST, STAR, MSER, GFFT and DENSE are fused with Feature extractors of SIFT and SURF. In our experiment, time taken for execution of different fusion techniques is compared. Feature extractors of SURF and SIFT produce almost the same results. As shown in Fig. 12. Taking normalized time along the positive <SPAN class="ft20">y </SPAN>axis, showed SIFT, GFFT and MSER to be efficient in time. However, this alone is not sufficient to evaluate time complexity of Bag of Words application.</P>
+<P class="p113 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First step in our experiment, we evaluate feature detectors and extractors. Feature detectors such as SIFT, BRISK, ORB, SURF, FAST, STAR, MSER, GFFT and DENSE are fused with Feature extractors of SIFT and SURF. In our experiment, time taken for execution of different fusion techniques is compared. Feature extractors of SURF and SIFT produce almost the same results. As shown in Fig. Taking normalized time along the positive <SPAN class="ft20">y </SPAN>axis, showed SIFT, GFFT and MSER to be efficient in time. However, this alone is not sufficient to evaluate time complexity of Bag of Words application.</P>
 </DIV>
 
 ![compare1](https://cloud.githubusercontent.com/assets/11435669/20867666/fda255dc-ba17-11e6-9d34-621ad77f895e.png)
@@ -171,10 +171,11 @@ HARRIS corner detection in detecting corners</P>
 
 
 <DIV id="id_1">
-<P class="p80 ft10"><SPAN class="ft10"><H2> B.&nbsp;&nbsp; Results </H2></P>
+<P class="p80 ft10"><SPAN class="ft10"><H2> Results </H2></P>
 <P class="p117 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<NOBR>Database–1</NOBR> has images with slight variation. Therefore, using Bag of Words we can achieve an accuracy of 100%. Number of features clustered by <NOBR>K–means</NOBR> has to be considered in order to evaluate space dimensionality. Fig. shows DENSE features to have the highest number of features clustered. Here as the dimension is normalized, in our experiments: DENSE has a dimension of around 600,000 and FAST around 200,000, rest in the range of <NOBR>10–50</NOBR> hundreds. A low computing system fails to evaluate DENSE. Thereby, we discard DENSE in our further experiments.</P>
 </DIV>
 ![compare4](https://cloud.githubusercontent.com/assets/11435669/20867663/fd9fea90-ba17-11e6-8a70-bf95e8c7caa6.png)
+<P class="p80 ft10">Comparing dimensions of Feature detectors</P>
 
 <DIV id="id_1_2">
 <P class="p118 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We once again fuse various feature detectors with SIFT and SURF feature extractors, for our <NOBR>Dataset–2.</NOBR> After analysis, SIFT feature extractor performed better than SURF feature extractor. However, with space complexity, few algorithms like GFFT cannot perform with SIFT. Therefore, even though less efficient, systems with space complexity works well with SURF. Otherwise, SIFT feature extractor produces better results. This comparison can be seen from Fig. (top), wherein, accuracy obtained from SIFT and SURF are normalized. Also, from Fig. (bottom) normalized error rates and dimensions are compared for different feature detectors with SIFT feature extractor. The lesser the dimension and error rates, the better the performance. Therefore, the FAST feature detector doesn’t seem to be perform better and can be ignored in our next experiment.</P>
@@ -182,6 +183,7 @@ HARRIS corner detection in detecting corners</P>
 
 ![compare2](https://cloud.githubusercontent.com/assets/11435669/20867661/fd8f17e2-ba17-11e6-93b7-35b49969ce7f.png)
 ![compare3](https://cloud.githubusercontent.com/assets/11435669/20867662/fd9873b4-ba17-11e6-8674-b7dce3ceef28.png)
+<P class="p80 ft10">Comparison between SIFT and SIRF (top) , Dimension vs Error rates of Feature Detectors with SIFT Feature Extractor(bottom).</P>
 
 <DIV id="id_2">
 <P class="p121 ft6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For <NOBR>Dataset–3</NOBR> and <NOBR>Dataset–4,</NOBR> results are specific to the given system. These are given by table Table. 3. (top) and Table. 3. (bottom) respectively. First of all, for <NOBR>Dataset–3</NOBR> we can see that: even though GFFT is faster, it is less efficient, due to motion effects in sports activities. Also, it can be seen that <NOBR>SURF–SIFT</NOBR> has time complexity as the data is large. However, for <NOBR>Dataset–3</NOBR> <NOBR>SURF–SURF</NOBR> is the most efficient.</P>
@@ -193,39 +195,33 @@ HARRIS corner detection in detecting corners</P>
 </DIV>
 
 ![table3](https://cloud.githubusercontent.com/assets/11435669/20868073/4460c4a6-ba20-11e6-9845-d4be928c158a.png)
-<P class="p129 ft8">Table. 3. Results for <NOBR>Dataset–3</NOBR> (top), Results for <NOBR>Dataset–4</NOBR> (bottom).</P>
 
 <DIV id="id_1">
-<P class="p130 ft6"><SPAN class="ft6">V.</SPAN><SPAN class="ft57">CONCLUSION</SPAN></P>
-<P class="p131 ft9">According to our observation, choice of feature extractors and feature detectors is specific to the system. Previous studied showed SURF to be performing than SIFT. However we believe that it is true only in the case of Feature Detection. Thereby, from our observations, the fusion of SURF feature detection and SIFT feature extractor is the most efficient. However, it also has the higher time complexity. Therefore, with parallelization SURF <NOBR>–SURF</NOBR> performs optimally.</P>
-<P class="p132 ft9">Additionally, for images with motion effects, GFFT perform worse than otherwise. To our knowledge, GFFT is the fastest performing feature detector. It produces optimal results for data without motion effects.</P>
-<P class="p133 ft9">For our future work, we will extend Bag of Words with VLDA encoding and implement Spatial Pyramid Pooling. Also, we will try to uses CNN with Spatial Pyramid pooling technique to achieve better scene classification accuracy.</P>
+<P class="p80 ft10"><SPAN class="ft10"><H2> Conclusion </H2></P>
+<P class="p131 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;According to our observation, choice of feature extractors and feature detectors is specific to the system. Previous studied showed SURF to be performing than SIFT. However we believe that it is true only in the case of Feature Detection. Thereby, from our observations, the fusion of SURF feature detection and SIFT feature extractor is the most efficient. However, it also has the higher time complexity. Therefore, with parallelization SURF <NOBR>–SURF</NOBR> performs optimally.</P>
+<P class="p132 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Additionally, for images with motion effects, GFFT perform worse than otherwise. To our knowledge, GFFT is the fastest performing feature detector. It produces optimal results for data without motion effects.</P>
+<P class="p133 ft9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For our future work, we will extend Bag of Words with VLDA encoding and implement Spatial Pyramid Pooling. Also, we will try to uses CNN with Spatial Pyramid pooling technique to achieve better scene classification accuracy.</P>
 <P class="p134 ft6">ACKNOWLEDGMENT</P>
 </DIV>
+
 <DIV id="id_1_2">
-<P class="p135 ft6">VII. REFERENCES</P>
-<P class="p136 ft59"><SPAN class="ft29">[1]</SPAN><SPAN class="ft58">A. Vailaya, M. Figueiredo, A. Jain, and H.J. Zhang. Image classification for </SPAN><NOBR>content-based</NOBR> indexing. IEEE Trans. on Image Processing, <NOBR>10(1):117–130,</NOBR> 2001.</P>
-<P class="p137 ft59"><SPAN class="ft29">[2]</SPAN><SPAN class="ft58">Performance Comparison of Various Feature </SPAN><NOBR>Detector-Descriptor</NOBR> Combinations for <NOBR>Content-based</NOBR> Image Retrieval with <NOBR>JPEG-encoded</NOBR> Query Images by Jianshu Chao, Anas <NOBR>Al-Nuaimi,</NOBR> Georg Schroth and Eckehard Steinbach</P>
-<P class="p138 ft59"><SPAN class="ft29">[3]</SPAN><SPAN class="ft58">S. Lazebnik, C. Schmid, J. Ponce. 2006. Beyond Bags of Features: Spatial Pyramid Matching for Recognizing Natural Scene Categories. IEEE Computer Vision and Pattern Recognition, pp. </SPAN><NOBR>2169-2178.</NOBR></P>
-<P class="p139 ft29"><SPAN class="ft60">[4]</SPAN><SPAN class="ft61">F. Monay, P. Quelhas, </SPAN><NOBR>J.-M.</NOBR> Odobez, and D. <NOBR>Gatica-Perez.</NOBR> Integrating <NOBR>co-occurrence</NOBR> and spatial contexts on patchbased scene segmentation. In CVPR, Beyond Patches Workshop, New York, NY, June <NOBR>17–22,</NOBR> 2006.</P>
-<P class="p136 ft63"><SPAN class="ft29">[5]</SPAN><SPAN class="ft62">M. R. Boutell, J. Luo, and C. M. Brown. Factor graphs for </SPAN><NOBR>region-based</NOBR> <NOBR>whole-scene</NOBR> classification. In CVPR, Semantic Learning Workshop, New York, NY, June <NOBR>17–22,</NOBR> 2006.</P>
-<P class="p136 ft59"><SPAN class="ft29">[6]</SPAN><SPAN class="ft58">J. C. van Gemert, J. Geusebroek, C. J. Veenman, C. G. M. Snoek, and A. W. M. Smeulders. Robust scene categorization by learning image statistics in context. In CVPR, Semantic Learning Workshop, New York, NY, June </SPAN><NOBR>17–22,</NOBR> 2006.</P>
-<P class="p140 ft29"><SPAN class="ft60">[7]</SPAN><SPAN class="ft61">Performance Analysis of Various Feature Detector and Descriptor for </SPAN><NOBR>Real-Time</NOBR> Video based Face Tracking by Akash Patel, D. R. Kasat.</P>
-<P class="p141 ft65"><SPAN class="ft29">[8]</SPAN><SPAN class="ft64">Herbert Bay, Andreas Ess, Tinne Tuytelaars, Luc Van Gool </SPAN><A href="http://www.vision.ee.ethz.ch/~surf/papers.html">"SURF: Speeded Up Robust Features", </A>Computer Vision and Image Understanding (CVIU), Vol. 110, No. 3, pp. <NOBR>346–359,</NOBR> 2008.</P>
-<P class="p136 ft59"><SPAN class="ft29">[9]</SPAN><SPAN class="ft66">E. Rosten and T. Drummond, “Machine learning for high speed corner detection,” in 9th Euproean Conference on Computer Vision, vol. 1, 2006, pp. </SPAN><NOBR>430–443.</NOBR></P>
-<P class="p136 ft63"><SPAN class="ft29">[10]</SPAN><SPAN class="ft67">J. Matas, O. Chum, M. Urban, and T. Pajdla. Robust wide baseline stereo from maximally stable extremal regions. In Proc. of British Machine Vision Conference, pages </SPAN><NOBR>384–396,</NOBR> 2002.</P>
-<P class="p142 ft59"><SPAN class="ft29">[11]</SPAN><SPAN class="ft68">Ethan Rublee, Vincent Rabaud, Kurt Konolige, Gary Bradski </SPAN><A href="http://www.vision.cs.chubu.ac.jp/CV-R/pdf/Rublee_iccv2011.pdf">"ORB: an efﬁcient alternative to SIFT or SURF", </A>Computer Vision (ICCV), 2011 IEEE International Conference on. IEEE, 2011.</P>
-<P class="p143 ft63"><SPAN class="ft29">[12]</SPAN><SPAN class="ft67">Refer: </SPAN><A href="http://ttic.uchicago.edu/~mostajabi/Tutorial.html.%20By">http://ttic.uchicago.edu/~mostajabi/Tutorial.html. By </A>Mostajabi, 2011.</P>
-<P class="p144 ft63"><SPAN class="ft29">[13]</SPAN><NOBR><SPAN class="ft67">L.-J.</SPAN></NOBR> Li and L. <NOBR>Fei-Fei.</NOBR> What, where and who?Classifying events by scene and object recognition. In ICCV, 2007.</P>
-<P class="p145 ft63"><SPAN class="ft29">[14]</SPAN><SPAN class="ft67">A. Quattoni and A. Torralba. Recognizing indoor scenes. In CVPR, 2009.</SPAN></P>
-<P class="p146 ft27"><SPAN class="ft29">[15]</SPAN><SPAN class="ft69">S. Lazebnik, C. Schmid, and J. Ponce. Beyond bags of</SPAN></P>
-<P class="p147 ft27">features: Spatial pyramid matching for recognizing natural scene categories. In CVPR, 2006.</P>
+<P class="p80 ft10"><SPAN class="ft10"><H2> References </H2></P>
+<P class="p136 ft59"><SPAN class="ft29">[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft58">A. Vailaya, M. Figueiredo, A. Jain, and H.J. Zhang. Image classification for </SPAN><NOBR>content-based</NOBR> indexing. IEEE Trans. on Image Processing, <NOBR>10(1):117–130,</NOBR> 2001.</P>
+<P class="p137 ft59"><SPAN class="ft29">[2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft58">Performance Comparison of Various Feature </SPAN><NOBR>Detector-Descriptor</NOBR> Combinations for <NOBR>Content-based</NOBR> Image Retrieval with <NOBR>JPEG-encoded</NOBR> Query Images by Jianshu Chao, Anas <NOBR>Al-Nuaimi,</NOBR> Georg Schroth and Eckehard Steinbach</P>
+<P class="p138 ft59"><SPAN class="ft29">[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft58">S. Lazebnik, C. Schmid, J. Ponce. 2006. Beyond Bags of Features: Spatial Pyramid Matching for Recognizing Natural Scene Categories. IEEE Computer Vision and Pattern Recognition, pp. </SPAN><NOBR>2169-2178.</NOBR></P>
+<P class="p139 ft29"><SPAN class="ft60">[4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft61">F. Monay, P. Quelhas, </SPAN><NOBR>J.-M.</NOBR> Odobez, and D. <NOBR>Gatica-Perez.</NOBR> Integrating <NOBR>co-occurrence</NOBR> and spatial contexts on patchbased scene segmentation. In CVPR, Beyond Patches Workshop, New York, NY, June <NOBR>17–22,</NOBR> 2006.</P>
+<P class="p136 ft63"><SPAN class="ft29">[5]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft62">M. R. Boutell, J. Luo, and C. M. Brown. Factor graphs for </SPAN><NOBR>region-based</NOBR> <NOBR>whole-scene</NOBR> classification. In CVPR, Semantic Learning Workshop, New York, NY, June <NOBR>17–22,</NOBR> 2006.</P>
+<P class="p136 ft59"><SPAN class="ft29">[6]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft58">J. C. van Gemert, J. Geusebroek, C. J. Veenman, C. G. M. Snoek, and A. W. M. Smeulders. Robust scene categorization by learning image statistics in context. In CVPR, Semantic Learning Workshop, New York, NY, June </SPAN><NOBR>17–22,</NOBR> 2006.</P>
+<P class="p140 ft29"><SPAN class="ft60">[7]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft61">Performance Analysis of Various Feature Detector and Descriptor for </SPAN><NOBR>Real-Time</NOBR> Video based Face Tracking by Akash Patel, D. R. Kasat.</P>
+<P class="p141 ft65"><SPAN class="ft29">[8]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft64">Herbert Bay, Andreas Ess, Tinne Tuytelaars, Luc Van Gool </SPAN><A href="http://www.vision.ee.ethz.ch/~surf/papers.html">"SURF: Speeded Up Robust Features", </A>Computer Vision and Image Understanding (CVIU), Vol. 110, No. 3, pp. <NOBR>346–359,</NOBR> 2008.</P>
+<P class="p136 ft59"><SPAN class="ft29">[9]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft66">E. Rosten and T. Drummond, “Machine learning for high speed corner detection,” in 9th Euproean Conference on Computer Vision, vol. 1, 2006, pp. </SPAN><NOBR>430–443.</NOBR></P>
+<P class="p136 ft63"><SPAN class="ft29">[10]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft67">J. Matas, O. Chum, M. Urban, and T. Pajdla. Robust wide baseline stereo from maximally stable extremal regions. In Proc. of British Machine Vision Conference, pages </SPAN><NOBR>384–396,</NOBR> 2002.</P>
+<P class="p142 ft59"><SPAN class="ft29">[11]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft68">Ethan Rublee, Vincent Rabaud, Kurt Konolige, Gary Bradski </SPAN><A href="http://www.vision.cs.chubu.ac.jp/CV-R/pdf/Rublee_iccv2011.pdf">"ORB: an efﬁcient alternative to SIFT or SURF", </A>Computer Vision (ICCV), 2011 IEEE International Conference on. IEEE, 2011.</P>
+<P class="p143 ft63"><SPAN class="ft29">[12]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft67">Refer: </SPAN><A href="http://ttic.uchicago.edu/~mostajabi/Tutorial.html.%20By">http://ttic.uchicago.edu/~mostajabi/Tutorial.html. By </A>Mostajabi, 2011.</P>
+<P class="p144 ft63"><SPAN class="ft29">[13]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><NOBR><SPAN class="ft67">L.-J.</SPAN></NOBR> Li and L. <NOBR>Fei-Fei.</NOBR> What, where and who?Classifying events by scene and object recognition. In ICCV, 2007.</P>
+<P class="p145 ft63"><SPAN class="ft29">[14]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft67">A. Quattoni and A. Torralba. Recognizing indoor scenes. In CVPR, 2009.</SPAN></P>
+<P class="p146 ft27"><SPAN class="ft29">[15]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN class="ft69">S. Lazebnik, C. Schmid, and J. Ponce. Beyond bags of features: Spatial pyramid matching for recognizing natural scene categories. In CVPR, 2006.</P>
 </DIV>
-</DIV>
-<DIV id="id_2">
-<P class="p148 ft9">Thanks to Dr. Dapeng Wu for supporting us and assisting in successful completion of the project. Thanks to researcher, contributing to the field of Scene classification and comparison of Feature extractors and Feature detectors.</P>
-<P class="p149 ft12">8</P>
-</DIV>
-</DIV>
+
 </BODY>
 </HTML>
