@@ -1,7 +1,7 @@
 <BODY>
 
 <DIV id="id_1">
-<p style="text-align: center;"><strong style="font-size: 125%;">Evaluating Bag of Features in Scene Classification </p>
+<p style="text-align: center;font-size: 300%;">Evaluating Bag of Features in Scene Classification </p>
 </DIV>
 <DIV id="id_2">
 <DIV id="id_2_1">
