@@ -1,7 +1,7 @@
 <BODY>
 
 <DIV id="id_1">
-<H1> Evaluating Bag of Features in Scene Classification</H1>
+<H3> Evaluating Bag of Features in Scene Classification</H3>
 </DIV>
 <DIV id="id_2">
 <P class="p7 ft4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The demand for automation of machine in today’s world led to unsupervised learning. Bag of words being one such unsupervised technique, is dated only a decade back. However, research in this area has been no less. This project presents you with detailed implications of feature detection and extraction techniques on the Bag of Words’ application. In previous studies, detailed analysis of: dimension complexity, time complexity and space complexity has not been attempted. Also, we present to readers, different scenarios in which a particular method would be beneficial over the other.</P>
