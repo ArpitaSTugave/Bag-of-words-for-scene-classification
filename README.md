@@ -4,10 +4,10 @@
 <H1> Evaluating Bag of Features in Scene Classification</H1>
 </DIV>
 <DIV id="id_2">
-<DIV id="id_2_1">
 <P class="p7 ft4">The demand for automation of machine in today’s world led to unsupervised learning. Bag of words being one such unsupervised technique, is dated only a decade back. However, research in this area has been no less. This paper presents you with detailed implications of feature detection and extraction techniques on the Bag of Words’ application. In previous studies, detailed analysis of: dimension complexity, time complexity and space complexity has not been attempted. Also, we present to readers, different scenarios in which a particular method would be beneficial over the other.</P>
-<P class="p8 ft4"><SPAN class="ft3">Index Terms</SPAN>— Speeded up Robust <NOBR>features–SURF,</NOBR> Scale- invariant feature <NOBR>transform–SIFT,</NOBR> Features from accelerated segment <NOBR>test–FAST,</NOBR> BRISK, STAR, ORB, GFFT, <SPAN class="ft5">Maximally Stable Extremal </SPAN><NOBR><SPAN class="ft5">Regions–</SPAN>MSER,</NOBR> DENSE, <NOBR>K–Means,</NOBR> Support Vector <NOBR>Machine–SVM,</NOBR> Bag of <NOBR>Words–BOW</NOBR> and Convolutional Neural Networks <NOBR>–CNN.</NOBR></P>
-<P class="p9 ft6"><SPAN class="ft6">I.</SPAN><SPAN class="ft7">INTRODUCTION</SPAN></P>
+</DIV>
+<DIV id="id_2_1">
+<P class="p9 ft6"><H1> Introduction </H1></P>
 <P class="p10 ft6">Scene Classification is one of the most advancing areas in the field of Image Processing. Because of its use in: weather forecast, browsing for a particular class of images, recognition of objects within a scene, medical diagnosis; demand for efficient scene classification algorithm rises. On one hand, if scene classification deals with images, on the other, text mining uses textual words. With a <NOBR>large–scale</NOBR> collection of data, efficient and robust classification techniques are needed for easy search. Scene classification of images depends mainly on: texture, transformation, color of the image. Use of efficient local feature detection and extraction techniques is necessary to capture these details.</P>
 <P class="p11 ft8">Fig. 1.Scene Classification.</P>
 </DIV>
